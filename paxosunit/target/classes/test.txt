@@ -1,0 +1,1 @@
+[{"client_id":3,"account":3,"value":10.0},{"client_id":2,"account":2,"value":1.0},{"client_id":1,"account":1,"value":14.0}]

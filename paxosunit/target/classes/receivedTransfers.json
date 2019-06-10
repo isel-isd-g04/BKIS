@@ -1,0 +1,14 @@
+[
+  {
+    "transfer_id": 1,
+    "orig_account": 1,
+    "dest_account": 2,
+    "value": 3
+  },
+  {
+    "transfer_id": 2,
+    "orig_account": 2,
+    "dest_account": 3,
+    "value": 4
+  }
+]

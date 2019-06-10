@@ -1,0 +1,17 @@
+[
+  {
+    "client_id": 1,
+    "account": 1,
+    "value": 10
+  },
+  {
+    "client_id": 2,
+    "account": 2,
+    "value": 5
+  },
+  {
+    "client_id": 3,
+    "account": 3,
+    "value": 10
+  }
+]

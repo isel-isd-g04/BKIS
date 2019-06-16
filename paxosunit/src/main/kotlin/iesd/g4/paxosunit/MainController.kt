@@ -1,10 +1,8 @@
 package iesd.g4.paxosunit
 
-import iesd.g4.paxosunit.Models.Account
 import iesd.g4.paxosunit.Models.Enums.MessageCode
 import iesd.g4.paxosunit.Models.InputModels.DirectDebitIM
 import iesd.g4.paxosunit.Models.InputModels.TransferIM
-import iesd.g4.paxosunit.Models.Transfer
 import org.springframework.http.ResponseEntity
 import org.springframework.web.bind.annotation.*
 
@@ -22,6 +20,9 @@ class MainController {
         else if(resp == MessageCode.ACCOUNT_NOT_FOUND){
             return ResponseEntity.status(404).body("Couldn't find one of the accounts")
         }
+        else if(resp == MessageCode.NOT_ENOUGH_MONEY){
+            return ResponseEntity.status(401).body("Not enough money")
+        }
         return ResponseEntity.status(500).build()
     }
 
@@ -34,6 +35,9 @@ class MainController {
         }
         else if(resp == MessageCode.ACCOUNT_NOT_FOUND){
             return ResponseEntity.status(404).body("Couldn't find one of the accounts")
+        }
+        else if(resp == MessageCode.NOT_ENOUGH_MONEY){
+            return ResponseEntity.status(401).body("Not enough money")
         }
         return ResponseEntity.status(500).build()
     }

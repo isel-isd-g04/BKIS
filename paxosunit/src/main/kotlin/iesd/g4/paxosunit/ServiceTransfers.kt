@@ -22,9 +22,9 @@ class ServiceTransfers{
         @JvmStatic
         fun alterFunds(transfer: TransferIM): MessageCode{
             var list_accounts = FileAux.readAccounts()
-            var list_accounts_found = list_accounts!!.filter{it.account==transfer.orig_account || it.account==transfer.dest_account}
-            var account_found_origin = list_accounts_found!!.find{it.account==transfer.orig_account}
-            var account_found_dest = list_accounts_found!!.find{it.account==transfer.dest_account}
+            var list_accounts_found = list_accounts!!.filter{it.account.equals(transfer.orig_account,true) || it.account.equals(transfer.dest_account,true)}
+            var account_found_origin = list_accounts_found!!.find{it.account.equals(transfer.orig_account,true)}
+            var account_found_dest = list_accounts_found!!.find{it.account.equals(transfer.dest_account,true)}
             if(account_found_origin!= null && account_found_dest != null){
                 if(account_found_origin.value - transfer.value <0){
                     return MessageCode.NOT_ENOUGH_MONEY

@@ -1,17 +1,32 @@
 [
   {
-    "client_id": 1,
-    "account": 1,
-    "value": 10
+    "client_id": "1",
+    "account": "PTuser-1",
+    "value": 1
   },
   {
     "client_id": 2,
-    "account": 2,
-    "value": 5
+    "account": "PTuser-10",
+    "value": 10
   },
   {
     "client_id": 3,
-    "account": 3,
+    "account": "PTuser-1000",
+    "value": 1000
+  },
+  {
+    "client_id": "4",
+    "account": "PTcmois-01",
     "value": 10
+  },
+  {
+    "client_id": 5,
+    "account": "PTcmois-02",
+    "value": 5
+  },
+  {
+    "client_id": 6,
+    "account": "PTcmpis-01",
+    "value": 5
   }
 ]

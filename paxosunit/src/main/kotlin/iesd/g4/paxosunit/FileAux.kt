@@ -17,8 +17,8 @@ import java.nio.file.Files.readAllBytes
 
 class FileAux{
     companion object {
-        val accountsPath = "classpath:accounts.json"
-        val transfersPath = "classpath:receivedTransfers.json"
+        val accountsPath = "./config/accounts.json"//"classpath:accounts.json"
+        val transfersPath = "./config/receivedTransfers.json"//"classpath:receivedTransfers.json"
 
         @JvmStatic
         fun writeFile(filePath: String, content:String){
